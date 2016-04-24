@@ -6,8 +6,8 @@ permalink: /feed
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
     <title>HutchCodes</title>
-    <link>http://hutchcodes.net/</link>
-    <atom:link href="http://hutchcodes.net/rss.xml" rel="self" type="application/rss+xml" />
+    <link>https://hutchcodes.net/</link>
+    <atom:link href="https://hutchcodes.net/rss.xml" rel="self" type="application/rss+xml" />
     <description></description>
     <language>en-us</language>
     <pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %Z" }}</pubDate>
@@ -15,10 +15,10 @@ permalink: /feed
     {% for post in site.posts %}
     <item>
       <title>{{ post.title | xml_escape }}</title>
-      <link>http://hutchcodes.net{{ post.url }}</link>
+      <link>https://hutchcodes.net{{ post.url }}</link>
       <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %Z" }}</pubDate>
       <author>Jeremy Hutchinson</author>
-      <guid>http://hutchcodes.net{{ post.url }}</guid>
+      <guid>https://hutchcodes.net{{ post.url }}</guid>
       <description>{{ post.content | xml_escape }}</description>
     </item>
     {% endfor %}

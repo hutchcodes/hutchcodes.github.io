@@ -10,7 +10,7 @@ layout: nil
   <!-- Generated with pretzel -->
   {% for post in site.posts %}
   <url>
-    <loc>http://hutchcodes.net{{ post.url }}</loc>
+    <loc>https://hutchcodes.net{{ post.url }}</loc>
     <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.00</priority>
@@ -20,7 +20,7 @@ layout: nil
   {% for page in site.pages %}
 	{% if page.url %}
 	<url>
-		<loc>http://hutchcodes.net{{ page.url }}</loc>
+		<loc>https://hutchcodes.net{{ page.url }}</loc>
 		<changefreq>daily</changefreq>
 		<priority>1.00</priority>
 	</url>

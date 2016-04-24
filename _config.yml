@@ -11,7 +11,7 @@ email: jrhutch@live.com
 description: > # this means to ignore newlines until "baseurl:"
   Jeremy Hutchinson's thoughts on software development 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://hutchcodes.net" # the base hostname & protocol for your site
+url: "https://hutchcodes.net" # the base hostname & protocol for your site
 twitter_username: hutchcodes
 github_username:  hutchcodes
 avatar: /css/img/me.jpg
