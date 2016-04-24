@@ -35,10 +35,6 @@ sass:
 
 gems: [jekyll-paginate]
 
-category_dir: "categories"
-#category_layout: "index.html"
-
-
 #GitHub defaults I cannot change  
 lsi: false
 #safe: true
