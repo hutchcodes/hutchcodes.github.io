@@ -1,0 +1,12 @@
+---
+layout: layout
+---
+<section>
+    {% for post in paginator.posts %}
+    {% include partial_post.html %}
+    {% endfor %}
+</section>
+<section>
+    {% if paginator.prev_page %}<div class="prev"><a href="/page/{{ paginator.prev_page }}">Next Posts</a></div>{% endif %}
+    {% if paginator.next_page %}<div class="next"><a href="/page/{{ paginator.next_page }}">Previous Posts</a></div>{% endif %}
+</section> 

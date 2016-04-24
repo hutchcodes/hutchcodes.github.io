@@ -1,0 +1,13 @@
+<article class="post">
+    <header class="jumbotron">
+        <h2 class="postTitle"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <abbr class="postDate" title="{{ post.date }}">{{ post.date | date: "%B %e, %Y" }}</abbr>
+            {% for t in post.categories -%}
+            <a href="/categories/{{ t | slugify }}">{{ t }}</a>
+            {% endfor %}            
+    </header>
+    <div class="articleBody">
+        {{ post.content | split:"<!--more-->" | first | markdownify}}
+    </div>
+    <div><a href="{{ post.url }}" >Continue Reading</a></div>
+</article>

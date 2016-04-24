@@ -1,0 +1,16 @@
+---
+layout: layout
+footer: false
+---
+
+<h2>Posts tagged with {{ page.tag }}</h2>
+{% for tag in site.tags %}
+	{% if tag.name == page.tag %}
+
+		{% for post in tag.posts %}
+
+  			{% include partial_post.html %}
+
+		{% endfor %}
+	{% endif %}
+{% endfor %}

@@ -1,0 +1,21 @@
+---
+layout: layout
+---
+	<section>
+	    <article class="post">
+		    <header class="jumbotron">
+		        <h1 class="postTitle"><a href="{{ page.url }}">{{ page.title }}</a></h1>
+		        <abbr class="center" title="{{ page.date | date: "%B %e, %Y"  }}" itemprop="datePublished">{{ page.date | date: "%B %e, %Y" }}</abbr>
+		            {% if page.categories %}
+		            in 
+		            {% for t in page.categories -%}
+		            <a class="tag" href="/categories/{{ t }}">{{ t }}</a> 
+		            {% endfor %}
+		            {% endif %}
+		    </header>
+		    <div class="articleBody" >
+		        {{ content|safe }}
+		    </div>
+		    {% include disqus.html %}
+		</article>
+	</section>

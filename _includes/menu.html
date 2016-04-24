@@ -1,0 +1,49 @@
+<aside id="menu" role="complementary"  >
+    <section id="MeSection">
+        <div>
+            <button id="toggle-navigation" class="toggle-navigation" aria-expanded="false" onclick="menuButtonClick()">
+                <span class="screen-reader-text">open primary menu</span>
+                &equiv;
+            </button>
+            <div id="titleContainer">
+                <a id="avatar" href="/" title="home" ><img class="circle" src="{{site.avatar}}" alt="avatar" /></a>
+                <div>
+                    <p id="site"><a href="/">{{site.title}}</a></p>
+                    <p id="author"><a href="/about/">{{site.author}}</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="NavSection" onclick="menuClick()">
+        <div class="social">
+            <a href="{{ site.twitter }}" class="social circle"><img src="/css/img/twitter.png" alt="@hutchcodes" height="32" width="32" /></a>
+            <a href="{{ site.linkedin }}" class="social"><img src="/css/img/linkedin.png" alt="LinkedIn" height="32" width="32" /></a>
+            <a href="{{ site.feed }}" class="social"><img src="/css/img/rss.png" alt="rss" height="32" width="32" /></a>
+        </div>
+        <section id="NavMenuSection">
+            <nav id="NavMenu">
+                <div><a href="/">Home</a></div>
+                <div><a href="/projects/">Projects</a></div>
+                <div><a href="/speaking/">Speaking</a></div>
+                <div><a href="/about/">About</a></div>
+            </nav>
+        </section>
+        <section id="Search">
+            <form action="https://google.com/search" method="get">
+                <input type="hidden" name="sitesearch" value="http://hutchcodes.net" />
+                <input type="text" name="q" placeholder="Search"/>
+            </form>
+        </section>
+        <section id="CatMenuSection">
+            <h3 id="CatMenuHeader">Categories</h3>
+            {% assign sortedcats = site.categories | sort %}
+            <ul id="CatMenu">
+                {% for category in sortedcats  %}
+                <li>
+                    <a class="category" href="/archives/#{{category | first}}">{{ category | first }} ({{ category[1] | size }})</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </section>
+    </div>
+</aside>

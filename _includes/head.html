@@ -1,0 +1,15 @@
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  <meta name="author" content="{{ site.author }}">
+  <meta name="description" content="{{site.description}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@hutchcodes" />
+  <meta name="twitter:title" content="{{page.title}}" />
+  <meta name="twitter:description" content="{{excerpt | truncate(190)}}" />
+  <title>{{ site.title }}{% if page.title %} &mdash; {{ page.title }}{% endif %}</title>
+  <link rel="author" href="https://plus.google.com/u/0/+JeremyHutchinsondev/posts"/>
+  <link href="feed/index.html" type="application/rss+xml" rel="alternate" title="Blog Feed" />
+  <link rel="stylesheet" type="text/css" href="/css/site.css">
+  {% include scripts.html %}
+</head> 

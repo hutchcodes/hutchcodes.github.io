@@ -1,0 +1,9 @@
+---
+layout: layout
+---
+
+<h2>Posts tagged with {{ page.category }}</h2>
+
+{% for post in site.categories[page.category] %}
+    {% include partial_post.html %}
+{% endfor %}

@@ -1,0 +1,299 @@
+﻿@media only screen and (min-width: 800px) {
+    #titleContainer {
+        text-align: center;
+    }
+
+    #menu {
+        float: left;
+        padding: 20px;
+        width: 210px;
+        border-bottom-right-radius: 10px;
+    }
+
+    #toggle-navigation {
+        display: none;
+    }
+
+    #main {
+        padding: 0 50px 24px 50px;
+    }
+}
+
+@media only screen and (max-width: 799px) {
+
+    #MeSection {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 0;
+        height: 64px;
+        padding-top: 15px;
+    }
+
+    #MeSection p {
+        margin: 0;
+    }
+
+    #NavSection {
+        display: none;
+        float: left;
+        padding: 20px;
+        width: 210px;
+        border-bottom-right-radius: 10px;
+    }
+
+    #avatar img {
+        height: 48px;
+        float: left;
+        margin-right: 10px;
+    }
+
+    #main {
+        padding: 0 15px 24px 15px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    @-ms-viewport {
+        width: 600px;
+    }
+
+    #main {
+        padding: 0;
+    }
+}
+
+.screen-reader-text {
+    display: none;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+}
+
+#menu {
+    background: #222;
+    color: #fff;
+    z-index: 1;
+}
+
+#MeSection {
+    margin-top: 0;
+}
+
+#NavSection {
+    background: #222;
+}
+
+#NavMenu div {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+#NavMenu a {
+    font-size: 1em;
+    color: #fff;
+}
+
+#CatMenuHeader {
+    font-size: 1em;
+    color: #fff;
+    font-weight: normal;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+#CatMenu {
+    list-style: none;
+    padding-left: 0;
+}
+
+#CatMenu a {
+    color: #cccccc;
+    font-size: .75em;
+}
+
+#CatMenu li {
+    margin-bottom: 2px;
+}
+
+#menu a {
+    text-decoration: none;
+}
+
+#toggle-navigation {
+    background: #222;
+    color: #fff;
+    border: solid 1px #3E4145;
+    height: 36px;
+    width: 36px;
+    float: left;
+    font-size: 32px;
+    padding: 0px;
+    margin-right: 15px;
+    margin-top: 5px;
+}
+
+img, video, iframe {
+    max-width: 100%;
+}
+
+td img, video, iframe {
+    max-width: none;
+}
+
+a {
+    color: #3277b3;
+}
+
+blockquote {
+    border-left: 10px solid #888;
+    background: #eee;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-left: 10px;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.container {
+    background: #F0F1F2;
+    min-height: 100%;
+    margin-bottom: -30px;
+}
+
+footer {
+    height: 30px;
+    padding: 7px;
+    background: #222;
+    color: #fff;
+}
+
+#main {
+    background: #F0F1F2;
+    overflow: auto;
+}
+
+#main section {
+    padding:0;
+    margin:0;
+    border: none;
+}
+
+
+/*#region Post */
+.post {
+    background: #fff;
+    padding-top: 3em;
+    box-shadow: 0 0 2px 0 rgba(39,43,47,.1);
+    margin: 24px 0 24px 0;
+    padding: 24px 50px 24px 50px;
+}
+
+.postTitle {
+    margin-bottom: 0;
+}
+.postTitle a {
+    font-size: 36px;
+    color: #222;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.post abbr {
+    border: none;
+}
+
+.articleBody h2 {
+    margin-bottom: 0;
+    font-size: 1.3em;
+}
+
+.articleBody h3 {
+    margin-bottom: 0;
+    font-size: 1.1em;
+}
+
+.articleBody {
+    margin: 1.5em 0 1em 0;
+    -ms-text-size-adjust: 150%;
+    line-height: 1.5em;
+}
+
+.post p {
+    padding: .2em 0;
+}
+
+/*#endregion */
+
+#site a {
+    font-size: 1.5em;
+    margin-left: 5px;
+    margin-right: 10px;
+    color: #fff;
+    font-weight: normal;
+}
+
+#author a {
+    font-size: .75em;
+    margin-left: 5px;
+    margin-right: 10px;
+    color: #ccc;
+    font-weight: normal;
+}
+
+.social {
+    text-align: center;
+}
+
+.social img {
+    border-radius: 25%;
+}
+
+section {
+    border-top: 1px solid #3E4145;
+    margin-top: 15px;
+    padding-top: 10px;
+}
+
+.jumbotron {
+    text-align: center;
+    foo: bar;
+}
+.prev{
+    float: right;
+}
+.next {
+    float: left;
+}
+
+#archives ul {
+    list-style: none;
+    color: #555;
+}
+#archives .posts ul a {
+    text-decoration: none;
+    color: #222;
+}
+
+#archives .categories ul{
+  list-style: none;
+  overflow: hidden;
+  padding:0;
+}
+
+#archives .categories a.category{
+  background-color: #4B71B6;
+  color: #FFF;
+  border-radius: 5px;
+  padding: 5px;
+  text-decoration: none;
+}
+
+#archives .categories ul li {
+  float:left;
+  margin: 5px 5px;
+}
