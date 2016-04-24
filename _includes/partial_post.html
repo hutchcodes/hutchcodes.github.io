@@ -3,7 +3,7 @@
         <h2 class="postTitle"><a href="{{ post.url }}">{{ post.title }}</a></h2>
         <abbr class="postDate" title="{{ post.date }}">{{ post.date | date: "%B %e, %Y" }}</abbr> in 
             {% for t in post.categories -%}
-            <a href="/categories/{{ t | slugify }}">{{ t }}</a>
+            <a href="/archives/#{{ t }}">{{ t }}</a>
             {% endfor %}            
     </header>
     <div class="articleBody">
