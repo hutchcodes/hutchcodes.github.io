@@ -1,7 +1,6 @@
 ---
 layout: post
-categories: [JavaScript]
-disqus_post_id: 104 
+categories: [Angular, JavaScript]
 title: AngularJS URLs missing trailing slash
 ---
 I ran across this problem trying to deploy an Asp.Net MVC website with an AngularJS front end. &nbsp;Everything worked fine as long as the site was deployed as it's own website within IIS, but when we deployed to an Application folder within an existing site things started going wrong.
