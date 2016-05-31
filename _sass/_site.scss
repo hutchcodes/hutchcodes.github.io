@@ -66,6 +66,22 @@
     display: none;
 }
 
+/* Tables */
+table {
+  margin-bottom: 1rem;
+  border: 1px solid #e5e5e5;
+  border-collapse: collapse; 
+}
+td,
+th {
+  padding: .25rem .5rem;
+  border: 1px solid #e5e5e5;
+}
+tbody tr:nth-child(odd) td,
+tbody tr:nth-child(odd) th {
+  background-color: #f8f8f8;
+}
+
 html, body {
     height: 100%;
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -296,4 +312,17 @@ section {
 #archives .categories ul li {
   float:left;
   margin: 5px 5px;
+}
+
+/* Code */
+code.highlighter-rouge {
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+pre.highlight {
+  display: inline-block;
+  padding: 5px;
+  line-height: 1.25em;
+  border-radius: 3px;
+  background-color: #f8f8f8;
 }
