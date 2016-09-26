@@ -6,6 +6,12 @@ permalink: /speaking/
 published: true
 ---
 
+<strong>Web Application Security Basics</strong> 
+
+- <a href="http://vtcodecamp.org/2016/sessions#web-application-security-basics" target="_blank">Vermont Code Camp</a> - 09/17/16
+- <a href="http://www.meetup.com/CascoBayNUG/events/227717700/" target="_blank">Casco Bay .Net User Group</a> - 01/20/16
+- <a href="http://www.bostoncodecamp.com/CC24/sessions/details/15290" target="_blank">Boston Code Camp</a> - 11/21/15
+
 <strong>Intro to Azure Machine Learning</strong> 
 
 - <a href="http://www.meetup.com/CascoBayNUG/events/227718749/" target="_blank">Global Azure Bootcamp (Portland, ME)</a> - 4/16/16
