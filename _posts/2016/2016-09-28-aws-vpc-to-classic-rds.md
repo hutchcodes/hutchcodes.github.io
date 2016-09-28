@@ -14,6 +14,8 @@ The catch was we needed to create those instances in AWS's Virtual Private Netwo
 
 Here's how we eventually were able to get our VPC instance to talk to our classic mode RDS.
 
+<!--more-->
+
 1. Create the VPC with a CIDR of 10.0.0.0/16. This also creates a single Route Table name that one ```Through NAT```   
 2. Create second Route Table and call it ```Through IGW```
 3. Create a ```Public``` Subnet with a CIDR of 10.0.0.0/24
