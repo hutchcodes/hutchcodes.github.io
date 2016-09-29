@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Connection AWS VPC to Classic RDS
+title: Connecting AWS VPC to Classic RDS
 categories: [AWS]
 date: 2016-09-28
 published: true
