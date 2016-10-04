@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Moving from AWS Cloudsearch to Azure Search
+title: Moving from AWS to Azure
 categories: [AWS, Azure]
 date: 2016-10-03
 published: true
