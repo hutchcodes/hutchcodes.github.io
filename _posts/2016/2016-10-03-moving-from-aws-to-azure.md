@@ -10,6 +10,8 @@ We recently started moving from AWS to Azure. It's something I had been pushing 
 
 Below are some of the differences and lessons I found/learned in the process. I'll also try to post some specifics about each service we move for comparison sake.
 
+<!--more-->
+
 ### Documentation
 
 The first thing I noticed when moving from AWS to Azure is the documentation gap. Finding documentation and examples for AWS seems exceedingly difficult. Both at [docs.aws.amazon.com](http://docs.aws.amazon.com) as well as on [StackOverflow](https://stackoverflow.com) and through Google searches. 
