@@ -8,6 +8,8 @@ Occasionally after telling a recruiter that I’m not interested in a position (
 
 The list is in somewhat of a priority order.
 
+<!--more-->
+
 ## Team
 
 The team, more than any other aspect, can make or break a job. I want a team of really smart people. And not just smart developers, but smart managers, product owners, QA, design etc.  And not just smart, they should be open to sharing their knowledge as well as learning from others. Smart enough to have strong opinions, but humble enough to let others run with their ideas even when they disagree.
