@@ -10,6 +10,16 @@
   <title>{{ site.title }}{% if page.title %} &mdash; {{ page.title }}{% endif %}</title>
   <link rel="author" href="https://plus.google.com/u/0/+JeremyHutchinsondev/posts"/>
   <link href="feed/index.html" type="application/rss+xml" rel="alternate" title="Blog Feed" />
-  <link rel="stylesheet" type="text/css" href="/css/site.css">
-  {% include scripts.html %}
+  <style type="text/css">
+    {% capture css %}
+      {% include site.scss %}
+    {% endcapture %}
+    {{ css | scssify }}
+  </style>
+  <script>
+    {% capture scripts %}
+      {% include site.js %}
+    {% endcapture %}
+    {{ scripts | minify }}
+  </script>
 </head> 
