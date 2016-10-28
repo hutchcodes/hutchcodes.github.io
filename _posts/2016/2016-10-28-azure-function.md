@@ -22,19 +22,20 @@ The first step is of course to create the Function App through the Azure Portal.
 ### Creating the Function
 Whether you create your function through the portal or build it locally and deploy through continuous integration the file layout is the same, but not immediately obvious for some things.
 
-```
+~~~
 [root]
 | - host.json
 | - IndexerWatcher 
 | | - run.csx 
 | | - function.json
 | | - project.json (I had to add this file manually)
-```
+~~~
+
 **host.json** allows you to control some settings at the Function App level (could contain multiple functions). By default it is an empty JSON. I'd prefer a file populated with the defaults, but you can see what settings are available and their defaults [here](https://github.com/Azure/azure-webjobs-sdk-script/wiki/host.json).
 
 **function.json** contains settings for the function include bindings which you can use to add inputs and outputs to the function. In this case we have a binding the timer trigger that runs the job at the top of every hour, and SendGrid send emails.
 
-```
+~~~ javascript
 {
   "bindings": [
     {
@@ -54,11 +55,11 @@ Whether you create your function through the portal or build it locally and depl
   ],
   "disabled": false
 }
-```
+~~~
 
 **project.json** allows you to reference Nuget packages. In this case I'm referencing the Azure Search SDK so that I can get the status of the indexer. We could also do this through the Rest API, but I'm a big fan of strong typing and intellisense...
 
-```
+~~~ javascript
 {
   "frameworks": {
     "net46":{
@@ -68,7 +69,7 @@ Whether you create your function through the portal or build it locally and depl
     }
    }
 } 
-```
+~~~
 
 **run.csx** is the main script file. In this case it is C#, but it can be F#, Javascript, Powershell, Python etc. In C# it contains a function with the signature ```public static void Run()```.
 
@@ -78,7 +79,7 @@ Because we're using SendGrid and SendGrid is not automatically referenced, we ne
 
 After that we just call the Search Service, request the Indexer Status and generate an email if needed. If I don't need to send an email I just pass a null SendGridMessage back. That throws an error in the console, but I didn't see any other way to not send the email. If there is a better way please let me know.
 
-```
+~~~ csharp
 #r "SendGridMail"
 
 using System;
@@ -119,7 +120,7 @@ public static string GetEnvironmentVariable(string name)
 {
     return System.Environment.GetEnvironmentVariable(name, EnvironmentVariableTarget.Process);
 }
-```
+~~~
 
 ### App Settings
 
