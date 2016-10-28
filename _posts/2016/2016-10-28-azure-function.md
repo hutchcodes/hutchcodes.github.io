@@ -10,17 +10,17 @@ Azure Functions are a light weight way to deploy code. It's part of the "serverl
 
 So here's my real world example of something simple you can do with Azure Functions. It's just the tip of the iceberg, but it's better than a ```Hello Word```. 
 
-<!---more--->
+<!--more-->
 
 The problem I was trying to solve was that Azure Search Indexers don't alert you when they fail to index a document. Depending on how you have your indexer configured it either ignores the document or it keeps retrying and gets stuck. In my case it got stuck. Luckily it was in our Test environment.
 
 The goal of this was to create a watcher to periodically check the status of the indexer and send me an email if there were any errors. 
 
 ### Creating the Function App
-The first step is of course to create the Function App through the Azure Portal. The setup is similar to setting up an Azure Web App right down to the [yoursite].azurewebsites.net. The Function App also creates a Storage Account that is uses to store the code files.
+The first step is of course to create the Function App through the Azure Portal. The setup is similar to setting up an Azure Web App right down to the [yoursite].azurewebsites.net. The Function App also creates a Storage Account that is used to store the code files.
 
 ### Creating the Function
-Whether you create your function through the portal or build it locally and deploy through continuous integration the basic file layout is the same, but not immediately obvious for some things.
+Whether you create your function through the portal or build it locally and deploy through continuous integration the file layout is the same, but not immediately obvious for some things.
 
 ```
 [root]
@@ -30,9 +30,10 @@ Whether you create your function through the portal or build it locally and depl
 | | - function.json
 | | - project.json (I had to add this file manually)
 ```
- ```host.json``` allows you to control some settings at the Function App level (could contain multiple functions). By default it is an empty JSON. I'd prefer a file populated with the defaults, but you can see what settings are available and their defaults [here](https://github.com/Azure/azure-webjobs-sdk-script/wiki/host.json).
+**host.json** allows you to control some settings at the Function App level (could contain multiple functions). By default it is an empty JSON. I'd prefer a file populated with the defaults, but you can see what settings are available and their defaults [here](https://github.com/Azure/azure-webjobs-sdk-script/wiki/host.json).
 
-```function.json``` contains settings for the function include bindings which you can use to add inputs and outputs to the function. In this case we have a binding the timer trigger that runs the job at the top of every hour, and SendGrid send emails.
+**function.json** contains settings for the function include bindings which you can use to add inputs and outputs to the function. In this case we have a binding the timer trigger that runs the job at the top of every hour, and SendGrid send emails.
+
 ```
 {
   "bindings": [
@@ -55,7 +56,8 @@ Whether you create your function through the portal or build it locally and depl
 }
 ```
 
-```project.json``` allows you to reference Nuget packages. In this case I'm referencing the Azure Search SDK so that I can get the status of the indexer. We could also do this through the Rest API, but I'm a big fan of strong typing and intellisense...
+**project.json** allows you to reference Nuget packages. In this case I'm referencing the Azure Search SDK so that I can get the status of the indexer. We could also do this through the Rest API, but I'm a big fan of strong typing and intellisense...
+
 ```
 {
   "frameworks": {
@@ -68,11 +70,11 @@ Whether you create your function through the portal or build it locally and depl
 } 
 ```
 
-```run.csx``` is the main script file. In this case it is C#, but it can be F#, Javascript, Powershell, Python etc. In C# it contains a function with the signature ```public static void Run()```.
+**run.csx** is the main script file. In this case it is C#, but it can be F#, Javascript, Powershell, Python etc. In C# it contains a function with the signature ```public static void Run()```.
 
-In this case we have additional parameters for the TimerInfo, TraceWriter and a SendGridMessage. We don't need to configure any bindings to TraceWriter, it is always available to be passed into your function. 
+We have additional parameters for the TimerInfo, TraceWriter and a SendGridMessage. We don't need to configure any bindings for TraceWriter, it is always available to be passed into your function. The other two are configured in the function.json.
 
-Because we're using SendGrid and SendGrid is not automatically referenced, we need to tell the host to add the reference. We do that with the ```#r "SendGridMail"``` at the top. There's a handful of external assemblies you can [reference](https://azure.microsoft.com/en-us/documentation/articles/functions-reference-csharp/#referencing-external-assemblies).
+Because we're using SendGrid and SendGrid is not automatically referenced, we need to tell the host to add the reference. We do that with the ```#r "SendGridMail"``` at the top. There's a handful of external assemblies you can this way [reference](https://azure.microsoft.com/en-us/documentation/articles/functions-reference-csharp/#referencing-external-assemblies).
 
 After that we just call the Search Service, request the Indexer Status and generate an email if needed. If I don't need to send an email I just pass a null SendGridMessage back. That throws an error in the console, but I didn't see any other way to not send the email. If there is a better way please let me know.
 
@@ -118,10 +120,13 @@ public static string GetEnvironmentVariable(string name)
     return System.Environment.GetEnvironmentVariable(name, EnvironmentVariableTarget.Process);
 }
 ```
+
 ### App Settings
+
 From the Function App blade in the portal under ```Function App Settings``` there is ```Configure App Settings``` button. Click that and you can set your app settings just like you would for a Web App.   
  
 There are two app settings that you'll need to configure to make this work.
+
 - AzureWebJobsSendGridApiKey - This is the SendGrid API Key and the setting name has to match or you get an error.
 - SearchApiKey - This is API Key for your Azure Search service. You can name this setting anything you like, but make sure you update the call to ```GetEnvironmentVariable``` in the run.csx.
 
