@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Azure Function to Detect Failed Search Indexer
+title: Using Azure Functions to Detect Failed Search Indexer
 categories: [Azure]
 date: 2016-10-28
 published: true
