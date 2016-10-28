@@ -25,7 +25,7 @@ Whether you create your function through the portal or build it locally and depl
 ~~~
 [root]
 | - host.json
-| - IndexerWatcher 
+| / IndexerWatcher 
 | | - run.csx 
 | | - function.json
 | | - project.json (I had to add this file manually)
