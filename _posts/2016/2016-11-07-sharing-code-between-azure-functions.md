@@ -6,7 +6,7 @@ date: 2016-11-07
 published: true
 ---
 
-Once I had my Azure Search Indexer Failure Notifier working as an Azure Function I needed to make it run on all of our Indexers. I had 3 choices for sharing common code:
+Once I had my [Azure Search Indexer Failure Notifier](/2016/10/azure-function-search-indexer/) working as an Azure Function I needed to make it run on all of our Indexers. I had 3 choices for sharing common code:
 
 1. Copy/Paste
 2. Have one big function that checked every indexer
@@ -34,11 +34,11 @@ public static class Settings
 }
 ~~~
 
-Then at the top of the `run.csx` just put `#load "../shared/settings.csx"
+Then at the top of the `run.csx` just put `#load "../shared/settings.csx"`
 
 I can then replace my calls to `GetEnvironmentVariable("settingName")` with `Settings.GetSetting("settingName")`
 
-That worked great, so I continued to try to move the meat of the index watcher code. I created a folder `SearchIndexerWatcher` under in the `Shared` folder and created an `IndexerWatcher.csx` there and moved all of the code for checking the index status to that file.
+That worked great, so I continued to try to move the meat of the index watcher code. I created a `SearchIndexerWatcher` folder under in the `Shared` folder and created an `IndexerWatcher.csx` there and moved all of the code for checking the index status to that file.
 
 ~~~ csharp
 #load "../Settings.csx"
@@ -105,9 +105,9 @@ public static void IndexWatcher_Prod(SearchIndexer input, TraceWriter log, out M
 
 So this mostly works as expected. The Run.csx has the `#r` to pull in the SendGrid reference and the #load to pull in IndexerWatcher.csx. IndexerWatcher.csx then pulls in Settings.csx.
 
-Except when I created a new function for another one of our indexers it failed to compile because I forgot the project.json. And that's where things get tricky. That project.json pull the `Microsoft.Azure.Search` down from Nuget. We have no references to Microsoft.Azure.Search in the run.csx, so logically I'd like to put that in the `Shared/SearchIndexerWatcher` folder. But it doesn't work from there, it has to be in the root of the function's folder.
+Except when I created a new function for another one of our indexers it failed to compile because I forgot the project.json. And that's where things get tricky. That project.json pulls the `Microsoft.Azure.Search` reference down from Nuget. We have no references to Microsoft.Azure.Search in the run.csx, so logically I'd like to put that in the `Shared/SearchIndexerWatcher` folder. But it doesn't work from there, it has to be in the root of the function's folder.
 
-That's not ideal because if I use those files, I may not realize what dependencies need to be added to the project.json. I decided to leave the project.json in the `Shared/SearchIndexerWatcher` folder as a reference for what would need to be added to the function's project.json.
+That's not ideal because when I reuse the IndexWatch.csx later, I may not realize what dependencies need to be added to the project.json. I decided to leave the project.json in the `Shared/SearchIndexerWatcher` folder as a reference for what would need to be added to the function's project.json.
 
 Things I'm thinking about going forward:
 
