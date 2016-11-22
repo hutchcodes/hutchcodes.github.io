@@ -25,3 +25,63 @@ var appInsights=window.appInsights||function(config){
    
 window.appInsights=appInsights;
 appInsights.trackPageView();
+
+function facetSearchClick(facet){
+    var search = getParameterByName('search');
+    if (!search) search='';
+    if (!facet) facet='';
+    window.location.href = '/search?search=' + search + '&facet=' + facet;
+}
+
+function searchKeyPress(e){
+    if (e.keyCode != 13) return;
+    
+    var facet = getParameterByName('facet');
+    searchText = document.getElementById('searchText').value;
+    if (!searchText) searchText='';
+    if (!facet) facet='';
+    window.location.href = '/search?search=' + searchText + '&facet=' + facet;
+}
+
+function getSearchResults(searchText, facet) {
+    var searchUrl = 'https://hutchcodes.azurewebsites.net/api/Search';
+
+    if (!searchText) searchText = '';
+    if (!facet) facet = '';
+
+    searchUrl += '?search=' + searchText + '&facet=' + facet;
+
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = searchCallback;
+    
+    xhr.open('GET', searchUrl, true);
+    xhr.send('');
+    document.xhr = xhr;
+
+    function searchCallback(){
+        if(xhr.readyState === 4) {
+            if(xhr.status !== 200) {
+                alert('Search failed! ' + xhr.status + xhr.responseText);
+                return;
+            }
+    
+            var main = document.getElementById('main');
+            var section = document.getElementById('main').getElementsByTagName("section")[0];
+            
+            var results = xhr.responseText;
+            section.innerHTML = results.substring(1, results.length -1) ;
+        }
+    }
+}
+
+function getParameterByName(name, url) {
+    if (!url) {
+      url = window.location.href;
+    }
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)");
+    var results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}

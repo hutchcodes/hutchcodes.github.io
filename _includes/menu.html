@@ -29,10 +29,7 @@
             </nav>
         </section>
         <section id="Search">
-            <form action="https://google.com/search" method="get">
-                <input type="hidden" name="sitesearch" value="http://hutchcodes.net" />
-                <input type="text" name="q" placeholder="Search"/>
-            </form>
+            <input type="text" id="searchText" placeholder="Search" onkeypress="searchKeyPress(event)" />
         </section>
         <section id="CatMenuSection">
             <h3 id="CatMenuHeader">Categories</h3>
@@ -40,7 +37,7 @@
             <ul id="CatMenu">
                 {% for category in sortedcats  %}
                 <li>
-                    <a class="category" href="/archives/#{{category | first}}">{{ category | first }} ({{ category[1] | size }})</a>
+                    <a class="category" onclick="facetSearchClick('{{category | first}}'); return false;" href="/search">{{ category | first }} ({{ category[1] | size }})</a>
                 </li>
                 {% endfor %}
             </ul>
