@@ -86,7 +86,7 @@ using System;
 using SendGrid;
 using Microsoft.Azure.Search;
 
-public static void Run(TimerInfo myTimer, TraceWriter log, out SendGridMessage message)
+public static void Run(TimerInfo myTimer, TraceWriter log, out Mail message)
 {
     var apiKey = GetEnvironmentVariable("SearchApiKey");
     //log.Info(apiKey);
@@ -109,10 +109,14 @@ public static void Run(TimerInfo myTimer, TraceWriter log, out SendGridMessage m
     message = null;
     if (!string.IsNullOrEmpty(body))
     {
-        message = new SendGridMessage()
+        message = new Mail();
+		var content = new Content
         {
-            Text = body
+            Type = "text/plain",
+            Value = body
         };
+
+        message.AddContent(content);
     }
 }
 
@@ -128,7 +132,7 @@ From the Function App blade in the portal under ```Function App Settings``` ther
  
 There are two app settings that you'll need to configure to make this work.
 
-- AzureWebJobsSendGridApiKey - This is the SendGrid API Key and the setting name has to match or you get an error.
+- SendGridApiKey - This is the SendGrid API Key and the setting name has to match or you get an error.
 - SearchApiKey - This is API Key for your Azure Search service. You can name this setting anything you like, but make sure you update the call to ```GetEnvironmentVariable``` in the run.csx.
 
 ### TODO
@@ -137,4 +141,9 @@ There are two app settings that you'll need to configure to make this work.
 - It wasn't until after I had my first working Azure Function that I found the [Azure-Functions-CLI](https://www.npmjs.com/package/azure-functions-cli). This should allow you to test the functions locally before deploying them to Azure.
 
 ### Gotchas
-I started developing this in a console app, and I needed to install the SendGrid v6.3.4 package to get it working there. Neither the 7.* nore the 8.* packages had the SendGridMessage.
+I started developing this in a console app, and I needed to install the SendGrid v6.3.4 package to get it working there. Neither the 7.* nor the 8.* packages had the `SendGridMessage` class that was in the function's method signature.
+
+### Update (11/30/2016)
+With the general release of Azure Functions SendGrid was upgraded. I assume it was to the latest, but it was far enough that it broke my function until I changed `SendGridMessage` to `Mail`. This also required a change to how the mail was built. I've updated the code to reflect that.
+
+Also, the application setting AzureWebJobsSendGridApiKey was changed to SendGridApiKey. 
