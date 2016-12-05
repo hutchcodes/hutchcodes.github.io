@@ -26,30 +26,38 @@ var appInsights=window.appInsights||function(config){
 window.appInsights=appInsights;
 appInsights.trackPageView();
 
-function facetSearchClick(facet){
+function catSearchClick(cat){
     var search = getParameterByName('search');
     if (!search) search='';
-    if (!facet) facet='';
-    window.location.href = '/search?search=' + search + '&facet=' + facet;
+    if (!cat) cat='';
+    window.location.href = '/search?search=' + search + '&cat=' + cat;
 }
 
 function searchKeyPress(e){
     if (e.keyCode != 13) return;
     
-    var facet = getParameterByName('facet');
+    var cat = getParameterByName('cat');
+    var tag = getParameterByName('tag');
+    var catFilter = '';
+    var tagFilter = '';
     searchText = document.getElementById('searchText').value;
     if (!searchText) searchText='';
-    if (!facet) facet='';
-    window.location.href = '/search?search=' + searchText + '&facet=' + facet;
+    searchText = encodeURIComponent(searchText);
+    if (cat) catFilter = '&cat=' + cat;
+    if (tag) tagFilter = '&tag=' + tag;
+    window.location.href = '/search?search=' + searchText + catFilter + tagFilter
 }
 
-function getSearchResults(searchText, facet) {
-    var searchUrl = 'https://hutchcodes.azurewebsites.net/api/Search';
+function getSearchResults(searchText, cat, tag) {
+    var searchUrl = 'https://blogpost.azurewebsites.net/api/HttpTriggerCSharp1';
+
+	appInsights.trackEvent("Search", { search: searchText, category: cat, tag: tag });
 
     if (!searchText) searchText = '';
-    if (!facet) facet = '';
+    if (!cat) cat = '';
+    if (!tag) tag = '';
 
-    searchUrl += '?search=' + searchText + '&facet=' + facet;
+    searchUrl += '?search=' + searchText + '&cat=' + cat + '&tag=' + tag;
 
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = searchCallback;
@@ -65,13 +73,41 @@ function getSearchResults(searchText, facet) {
                 return;
             }
     
-            var main = document.getElementById('main');
-            var section = document.getElementById('main').getElementsByTagName("section")[0];
-            
-            var results = xhr.responseText;
-            section.innerHTML = results.substring(1, results.length -1) ;
+            var searchResults = JSON.parse(xhr.responseText);
+            window.searchResults = searchResults;
+            displaySearchResults(searchResults);
         }
     }
+}
+
+function displaySearchResults(searchResults){
+
+	var response = '';
+	var main = document.getElementById('main');	
+    var section = document.getElementById('main').getElementsByTagName("section")[0];
+
+    for (var x=0; x < searchResults.Results.length; x++)
+    {
+    	var r = searchResults.Results[x];
+        if (r.Document.Type == "post") {
+            var categories = "";
+            for (var y=0; y < r.Document.Categories.length; y++)
+            {
+            	var c = r.Document.Categories[y];
+                categories += "<a href='/archives/#" + c + "'>" + c + "</a>&nbsp;";
+            }
+            if (!categories)
+            {
+                categories = " in " + categories;
+            }
+            response += "<article class='post'> <header class='jumbotron'> <h2 class='postTitle'><a href='" + r.Document.Url + "'>" + r.Document.Title + "</a></h2> <abbr class='postDate' title='" + r.Document.PublishDate + "'>" + new Date(r.Document.PublishDate).toLocaleDateString("en-us", {year: "numeric", month: "long", day: "numeric"}) + "</abbr> " + categories + "</header> <div class='articleBody'>" + r.Document.Excerpt + "</div><div><a href='" + r.Document.Url + "'>Continue Reading</a></div></article>";
+        }
+        else
+        {
+            response += "<article class='post'> <header class='jumbotron'> <h2 class='postTitle'><a href='" + r.Document.Url + "'>" + r.Document.Title + "</a></h2></header> <div class='articleBody'>" + r.Document.Excerpt + "</div><div><a href='" + r.Document.Url + "'>Continue Reading</a></div></article>";
+        }
+    }
+    section.innerHTML = response;
 }
 
 function getParameterByName(name, url) {
