@@ -37,7 +37,7 @@
             <ul id="CatMenu">
                 {% for category in sortedcats  %}
                 <li>
-                    <a class="category" onclick="facetSearchClick('{{category | first}}'); return false;" href="/search">{{ category | first }} ({{ category[1] | size }})</a>
+                    <a class="category" href="/search/?search&cat={{category | first}}">{{ category | first }} ({{ category[1] | size }})</a>
                 </li>
                 {% endfor %}
             </ul>

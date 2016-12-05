@@ -94,7 +94,7 @@ function displaySearchResults(searchResults){
             for (var y=0; y < r.Document.Categories.length; y++)
             {
             	var c = r.Document.Categories[y];
-                categories += "<a href='/archives/#" + c + "'>" + c + "</a>&nbsp;";
+                categories += "<a href='/search/?search&cat=" + c + "'>" + c + "</a>&nbsp;";
             }
             if (!categories)
             {

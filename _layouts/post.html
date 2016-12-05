@@ -9,7 +9,7 @@ layout: layout
 		            {% if page.categories %}
 		            in 
 		            {% for t in page.categories -%}
-		            <a class="tag" href="/archives/#{{ t }}">{{ t }}</a> 
+		            <a class="tag" href="/search/?search&cat={{ t }}">{{ t }}</a> 
 		            {% endfor %}
 		            {% endif %}
 		    </header>
