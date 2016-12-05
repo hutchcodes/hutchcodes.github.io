@@ -26,13 +26,6 @@ var appInsights=window.appInsights||function(config){
 window.appInsights=appInsights;
 appInsights.trackPageView();
 
-function catSearchClick(cat){
-    var search = getParameterByName('search');
-    if (!search) search='';
-    if (!cat) cat='';
-    window.location.href = '/search?search=' + search + '&cat=' + cat;
-}
-
 function searchKeyPress(e){
     if (e.keyCode != 13) return;
     
@@ -45,7 +38,7 @@ function searchKeyPress(e){
     searchText = encodeURIComponent(searchText);
     if (cat) catFilter = '&cat=' + cat;
     if (tag) tagFilter = '&tag=' + tag;
-    window.location.href = '/search?search=' + searchText + catFilter + tagFilter
+    window.location.href = '/search?search=' + searchText + catFilter + tagFilter;
 }
 
 function getSearchResults(searchText, cat, tag) {
