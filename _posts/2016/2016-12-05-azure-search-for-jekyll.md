@@ -6,7 +6,7 @@ date: 2016-12-05
 published: true
 ---
 
-I added Azure Search to my static site built with Jekyll through the use of Azure Functions. Best part, **it's totally free**. 
+I added Azure Search to my static site built with Jekyll through the use of Azure Functions. Best part, **it's free***. 
 
 I moved this blog off of WordPress 18 months ago. The main reason I left was performance. I can't justify paying for an always on server for this blog, and I don't have the traffic to keep a site hot. The result was first page load times of 6-10 seconds. 
 
@@ -377,7 +377,7 @@ function getParameterByName(name, url) {
 }
 ~~~
 
-### Is It Really Free
+### *It's not quite free
 
 I'm using the free tier of Azure Search, and Azure Functions allows 1 million function calls and 400k Gbs of execution for free. In theory, there is no charge unless it gets a lot of use.
 
