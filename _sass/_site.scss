@@ -318,6 +318,7 @@ section {
 code.highlighter-rouge {
   background-color: #f8f8f8;
   border-radius: 3px;
+  font-size: 1.1em;
 }
 pre.highlight {
   display: inline-block;
@@ -325,4 +326,7 @@ pre.highlight {
   line-height: 1.25em;
   border-radius: 3px;
   background-color: #f8f8f8;
+}
+div.highlighter-rouge {
+    overflow-x: auto;
 }

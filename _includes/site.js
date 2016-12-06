@@ -1,4 +1,5 @@
 ﻿var menuVisible = false;
+var searchUrl = 'https://hutchcodes.azurewebsites.net/api/Search';
 
 function menuButtonClick() {
 	var nav = document.getElementById("NavSection");
@@ -42,8 +43,6 @@ function searchKeyPress(e){
 }
 
 function getSearchResults(searchText, cat, tag) {
-    var searchUrl = 'https://blogpost.azurewebsites.net/api/HttpTriggerCSharp1';
-
 	appInsights.trackEvent("Search", { search: searchText, category: cat, tag: tag });
 
     if (!searchText) searchText = '';
@@ -100,7 +99,12 @@ function displaySearchResults(searchResults){
             response += "<article class='post'> <header class='jumbotron'> <h2 class='postTitle'><a href='" + r.Document.Url + "'>" + r.Document.Title + "</a></h2></header> <div class='articleBody'>" + r.Document.Excerpt + "</div><div><a href='" + r.Document.Url + "'>Continue Reading</a></div></article>";
         }
     }
-    section.innerHTML = response;
+    if (response){
+        section.innerHTML = response;
+    }
+    else{
+        document.getElementById("searchMessage").innerHTML = "No results found."
+    }
 }
 
 function getParameterByName(name, url) {

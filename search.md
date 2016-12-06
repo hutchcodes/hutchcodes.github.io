@@ -1,6 +1,6 @@
 ---
 title: Searching...
-layout: page
+layout: search
 includeInSearch: false
 permalink: /search/
 published: true
@@ -10,6 +10,8 @@ published: true
 var query = getParameterByName('search');
 var cat = getParameterByName('cat');
 var tag = getParameterByName('tag');
+
+document.getElementById("searchText").value = query;
 
 getSearchResults(query, cat, tag);
 </script>
