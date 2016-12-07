@@ -8,9 +8,7 @@ published: true
 
 I added Azure Search to my static site built with Jekyll through the use of Azure Functions. Best part, **it's free***. 
 
-I moved this blog off of WordPress 18 months ago. The main reason I left was performance. I can't justify paying for an always on server for this blog, and I don't have the traffic to keep a site hot. The result was first page load times of 6-10 seconds. 
-
-Moving to Jekyll took some work, but hosting it on GitHub Pages has resulted in consistent half second page loads. The only downside has been search. I was using Google, but the UX was terrible. The user typed a search term in a textbox on my blog, was kicked out to a Google results page, clicking any link brought them back.
+This example is for [Jekyll](http://jekyllrb.com/), it will work with any static site. The only thing Jekyll specific is the JSON representation of the site, and any static site generator should be able to build that file. I've used ([Pretzel](https://github.com/Code52/pretzel) and [PieCrust](https://bolt80.com/piecrust/) as well, they are both nice tools, but hosting on GitHub pages has it's advantages). 
 
 <!--more-->
 
