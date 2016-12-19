@@ -14,6 +14,12 @@ includeInSearch: false
     <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %Z" }}</lastBuildDate>
     {% for post in site.posts %}
     <item>
+      {% for t in post.categories %}
+      <category>{{ t }}</category>
+      {% endfor %}
+      {% if post.publishToCodeProject %}
+      <category>CodeProject</category>
+      {% endif %}
       <title>{{ post.title | xml_escape }}</title>
       <link>https://hutchcodes.net{{ post.url }}</link>
       <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %Z" }}</pubDate>
