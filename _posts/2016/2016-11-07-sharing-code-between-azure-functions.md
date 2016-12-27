@@ -4,6 +4,7 @@ title: Sharing Code Between Azure Functions
 categories: [Azure]
 date: 2016-11-07
 published: true
+publishToCodeProject: true
 ---
 
 Once I had my [Azure Search Indexer Failure Notifier](/2016/10/azure-function-search-indexer/) working as an Azure Function I needed to make it run on all of our Indexers. I had 3 choices for sharing common code:
