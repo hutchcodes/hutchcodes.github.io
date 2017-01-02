@@ -19,9 +19,11 @@ ______
 ### Past
 
 **Understand Your Applications with Application Insights**
+
 - [Boston Code Camp](http://www.bostoncodecamp.com/CC26/sessions/details/16391) - 11/19/16
 
 **Intro to Azure Functions**
+
 - [Casco Bay .Net Users Group](http://www.meetup.com/CascoBayNUG/events/235116962/) - 11/16/16
 
 
