@@ -17,7 +17,7 @@ includeInSearch: false
       {% for t in post.categories %}
       <category>{{ t }}</category>
       {% endfor %}
-      {% if post.publishToCodeProject %}
+      {% if post.codeproject %}
       <category>CodeProject</category>
       {% endif %}
       <title>{{ post.title | xml_escape }}</title>

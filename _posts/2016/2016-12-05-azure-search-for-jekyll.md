@@ -4,7 +4,7 @@ title: Azure Search for Jekyll
 categories: [Azure, Jekyll]
 date: 2016-12-05
 published: true
-publishToCodeProject: true
+codeproject: true
 ---
 
 I added Azure Search to my static site built with Jekyll through the use of Azure Functions. Best part, **it's free***. 
