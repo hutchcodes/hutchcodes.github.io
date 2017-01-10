@@ -5,7 +5,7 @@ categories: [Azure, Jekyll]
 date: 2016-12-05
 published: true
 codeproject: true
-twitterdescs: I added Azure Search to my static site built with Jekyll through the use of Azure Functions. Best part, **it's free***.
+twitterdesc: I added Azure Search to my static site built with Jekyll through the use of Azure Functions. Best part, it's free*.
 twitterimage: 
 ---
 
