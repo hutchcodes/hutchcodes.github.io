@@ -6,7 +6,8 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@hutchcodes" />
   <meta name="twitter:title" content="{{page.title}}" />
-  <meta name="twitter:description" content="{{excerpt | truncate(190)}}" />
+  <meta name="twitter:description" content="{{page.twitterdesc | default: page.excerpt | truncate: 190}}" />
+  <meta name="twitter:image" content="twitterimg" />
   <title>{{ site.title }}{% if page.title %} &mdash; {{ page.title }}{% endif %}</title>
   <link rel="author" href="https://plus.google.com/u/0/+JeremyHutchinsondev/posts"/>
   <link href="feed/index.html" type="application/rss+xml" rel="alternate" title="Blog Feed" />
