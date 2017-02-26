@@ -1,6 +1,6 @@
 ---
 layout: post
-categories: [C#, Mobile]
+categories: [C#, Mobile, XPlat]
 title: Sharing Code with Linked Files
 ---
 This is a multipart series on how to share code between .Net platforms.  All the examples will be showing how to share between Windows 8 Store applications and Windows Phone 8 application, but the techniques are useful for sharing code between any .Net/Xamarin platforms.
