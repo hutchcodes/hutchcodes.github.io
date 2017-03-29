@@ -8,7 +8,8 @@ published: true
 
 We recently started moving some of our bits from AWS to Azure. One of the first bits to go was the Search. Below is my comparison of the two.
 
-### tl;dr
+**tl;dr**
+
 Azure has the ability to automatically index data stored in SQL, DocumentDB, and Azure Table Storage as well as documents stored in Azure Blob Storage. Azure's API is strongly typed and much more expressive than AWS's.
 
 <!--more-->
