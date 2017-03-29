@@ -20,7 +20,7 @@ Part of my ongoing series comparing AWS and Azure for the services where I've us
 ### Management
 In Azure Blob you have a *Storage Account*, within that storage account you can store Blobs, Files (think shared drive), Tables and Queues.  Within the Blobs you have logical groupings called *Containers*.  *Containers* are roughly equivalent to AWS S3 *Buckets*.
 
-In both AWS and Azure you can exposes these *Containers*\*Buckets* publicly or require a key to access them. The urls look like this:
+In both AWS and Azure you can exposes these *Containers*\\*Buckets* publicly or require a key to access them. The urls look like this:
 
 s3.amazonaws.com/[*BucketName*]/[*FileName*]
 
