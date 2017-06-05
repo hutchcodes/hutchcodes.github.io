@@ -8,7 +8,7 @@ layout: layout
 		        <abbr class="center" title="{{ page.date | date: "%B %e, %Y"  }}" itemprop="datePublished">{{ page.date | date: "%B %e, %Y" }}</abbr>
 		            {% if page.categories %}
 		            in 
-		            {% for t in page.categories -%}
+		            {% for t in page.categories %}
 		            <a class="tag" href="/search/?search&cat={{ t }}">{{ t }}</a> 
 		            {% endfor %}
 		            {% endif %}
