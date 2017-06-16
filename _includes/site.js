@@ -1,5 +1,5 @@
 ﻿var menuVisible = false;
-var searchUrl = 'https://hutchcodes.azurewebsites.net/api/Search';
+var searchUrl = 'https://hutchcodes-func.azurewebsites.net/api/Search';
 
 function menuButtonClick() {
 	var nav = document.getElementById("NavSection");
