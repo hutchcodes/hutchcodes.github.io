@@ -3,7 +3,7 @@ layout: post
 title: Why You Should Give a Lightning Talk
 categories: [Community]
 ---
-I previously posted that I had appointed myself <a href="http://hutchcodes.net/community-booster/">Community-Booster</a>, and so I now see it as my job to convince you to give a lightning talk at your local user group.  I could start by listing the benefits to you, or to the benefits to the user group, but I don’t think the for most people the fear of things going poorly outweigh the potential benefits.  So let’s focus on your fears.
+I previously posted that I had appointed myself <a href="/2015/02/community-booster/">Community-Booster</a>, and so I now see it as my job to convince you to give a lightning talk at your local user group.  I could start by listing the benefits to you, or to the benefits to the user group, but I don’t think the for most people the fear of things going poorly outweigh the potential benefits.  So let’s focus on your fears.
 <!--more-->
 
 <ul>

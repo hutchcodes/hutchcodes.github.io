@@ -4,7 +4,7 @@ title: Prematurely Optimizing My Blog
 categories: [Random]
 ---
 
-This blog isn't what you'd call 'high traffic'. My big problem wasn't load, it was keeping the site 'warm', so each user didn't have to wait for WordPress to spin up and before serving the first page. Of course once I started looking at performance I went fully down the rabbit hole <!--more--> and came out on a different [blogging platform](http://hutchcodes.net/blog-engines-compared/).  
+This blog isn't what you'd call 'high traffic'. My big problem wasn't load, it was keeping the site 'warm', so each user didn't have to wait for WordPress to spin up and before serving the first page. Of course once I started looking at performance I went fully down the rabbit hole <!--more--> and came out on a different [blogging platform](/2015/06/blog-engines-compared/).  
 
 I have an MSDN subscription and some unused Azure credits, so the first thing I did was move my WordPress site to Azure.  It was as simple as spinning up an WordPress site on Azure through the wizard, exporting from my old site and importing at the new one. I used the azure credits to host it in an 'Always On', Small, Basic, Web Application paid for by Azure credits. I quickly learned that the free MySql DB provided needed to be upgraded to a paid level costing $10/month.
 
@@ -25,7 +25,7 @@ At the end of all this I had decent performance.
 
 I was still getting things flagged by Google's [PageSpeed](https://developers.google.com/speed/pagespeed/insights/) as well as in [YSlow](http://yslow.org/).  There were things that I just couldn't easily control that I really wanted to fix. And it started to bother me that I had increased my hosting costs when I was expecting them to decrease.
 
-I looked at a bunch of [blogging platforms](http://hutchcodes.net/blog-engines-compared/) and ended up settling on [PieCrust CMS](http://bolt80.com/piecrust) which is a static site generator.
+I looked at a bunch of [blogging platforms](/2015/06/blog-engines-compared/) and ended up settling on [PieCrust CMS](http://bolt80.com/piecrust) which is a static site generator.
 
 A static site generator creates you're site in plain HTML on your machine and you upload that to your webhost. You can serve it out of any web host, or some interesting alternatives like Amazon S3, DropBox, or the one I eventually settled on [GitHub Pages](https://pages.github.com/).
 

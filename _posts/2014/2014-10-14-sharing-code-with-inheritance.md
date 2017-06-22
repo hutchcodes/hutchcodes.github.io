@@ -5,11 +5,11 @@ title: Sharing Code with Inheritance
 ---
 This is a multipart series on how to share code between .Net platforms.  All the examples will be showing how to share between Windows 8 Store applications and Windows Phone 8 application, but the techniques are useful for sharing code between any .Net/Xamarin platforms.
 <ol>
-	<li><a href="http://hutchcodes.net/linked-files/">Linked Files</a></li>
-	<li><a href="http://hutchcodes.net/conditional-compilation/">Conditional Compilation</a></li>
-	<li><a href="http://hutchcodes.net/partial-classes/">Partial Classes</a></li>
-	<li><a href="http://hutchcodes.net/sharing-code-with-inheritance/">Inheritance</a></li>
-	<li><a href="http://hutchcodes.net/sharing-code-with-dependency-injection/">Dependency Injection</a></li>
+    <li><a href="/2014/08/linked-files/">Linked Files</a></li>
+	<li><a href="/2014/08/conditional-compilation/">Conditional Compilation</a></li>
+	<li><a href="/2014/10/partial-classes/">Partial Classes</a></li>
+	<li><a href="/2014/10/sharing-code-with-inheritance/">Inheritance</a></li>
+	<li><a href="/2014/10/sharing-code-with-dependency-injection/">Dependency Injection</a></li>
 </ol>
 <h3>What is Inheritance?</h3>
 I’m just going to go ahead and assume you understand inheritance, but I’m keeping this section to stay with the theme from the other posts in this series.

@@ -58,7 +58,7 @@ includeInSearch: false
 
 That's simple enough. I had actually created that over a year ago when I first started to think about using Azure Search. I abandoned that attempt partly because it was going to be a manual process and I was worried I might forget the step to populate the index. 
 
-You can see the resulting `search.json` [here](http://hutchcodes.net/search.json)
+You can see the resulting `search.json` [here](/search.json)
 
 ### Function Triggered by a GitHub Webhook
 

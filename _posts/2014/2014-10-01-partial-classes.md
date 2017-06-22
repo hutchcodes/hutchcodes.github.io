@@ -5,18 +5,18 @@ title: Sharing Code with Partial Classes
 ---
 This is a multipart series on how to share code between .Net platforms.  All the examples will be showing how to share between Windows 8 Store applications and Windows Phone 8 application, but the techniques are useful for sharing code between any .Net/Xamarin platforms.
 <ol>
-	<li><a href="http://hutchcodes.net/linked-files/">Linked Files</a></li>
-	<li><a href="http://hutchcodes.net/conditional-compilation/">Conditional Compilation</a></li>
-	<li><a href="http://hutchcodes.net/partial-classes/">Partial Classes</a></li>
-	<li><a href="http://hutchcodes.net/sharing-code-with-inheritance/">Inheritance</a></li>
-	<li><a href="http://hutchcodes.net/sharing-code-with-dependency-injection/">Dependency Injection</a></li>
+	<li><a href="/2014/08/linked-files/">Linked Files</a></li>
+	<li><a href="/2014/08/conditional-compilation/">Conditional Compilation</a></li>
+	<li><a href="/2014/10/partial-classes/">Partial Classes</a></li>
+	<li><a href="/2014/10/sharing-code-with-inheritance/">Inheritance</a></li>
+	<li><a href="/2014/10/sharing-code-with-dependency-injection/">Dependency Injection</a></li>
 </ol>
 <h3>What are Partial Classes?</h3>
 Partial Classes are a way to split a class up into multiple files. It is frequently used when one part of your class is generated code and another part is written by hand.  In this case we’ll use partial classes to separate code that is shared between platforms and code that is platform specific.
 <!--more-->
 
 <h3>How do I do it?</h3>
-First you would need to use <a href="http://hutchcodes.net/linked-files/">linked files</a> to share the code between your projects. Then you need to change the class declaration to include the keyword partial.
+First you would need to use <a href="/2014/08/linked-files/">linked files</a> to share the code between your projects. Then you need to change the class declaration to include the keyword partial.
 
 ~~~ csharp
 partial class MainPageViewModel

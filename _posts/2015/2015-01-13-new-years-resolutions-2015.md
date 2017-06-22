@@ -3,7 +3,7 @@ layout: post
 title: New Years Resolutions 2015
 categories: [Random]
 ---
-This is my annual post where I publicly declare a few goals for the coming year.  Next year around this time I will take a look back to see <a title="New Years Resolutions 2014 – Retrospective" href="http://hutchcodes.net/new-years-resolutions-2014-retrospective/">how I did</a>.  Looking back at last year I noticed that some of my resolutions didn't have objective measurements, so I'm trying to include those this year.<!--more-->
+This is my annual post where I publicly declare a few goals for the coming year.  Next year around this time I will take a look back to see <a title="New Years Resolutions 2014 – Retrospective" href="/2015/01/new-years-resolutions-2014-retrospective/">how I did</a>.  Looking back at last year I noticed that some of my resolutions didn't have objective measurements, so I'm trying to include those this year.<!--more-->
 
 <h2>Speak More</h2>
 They say you <em>really</em> learn something when teaching it, and I can speaking forced me to deeply learn the topics I was presenting.  I really enjoyed speaking at my local <a href="http://www.cbnug.net">.Net user's group</a> as well as <a href="http://www.bostoncodecamp.com/">Boston Code Camp</a> and <a href="vtcodecamp.org">Vermont Code Camp</a>.  I'm going to submit sessions to all both code camps, my local user group and at least 2 larger conferences.  All I can do is submit, the decision about whether I speak is out of my hands.

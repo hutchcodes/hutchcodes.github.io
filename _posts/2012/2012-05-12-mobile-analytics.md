@@ -3,7 +3,7 @@ layout: post
 categories: [Mobile]
 title: Mobile Analytics
 ---
-<p>In my previous <a href="http://hutchcodes.net/microsofts-app-reporting/" target="_blank">post</a> I complained about the 6 day delay in getting download number from Microsoft. &nbsp;Since then I have done a little bit of research into other ways of getting that information in a more timely manner. &nbsp;I found two good options <a href="http://mtiks.com/" target="_blank">MTIKS</a> and <a href="http://www.flurry.com/" target="_blank">Flurry</a>. &nbsp;They both provide much more information than I was looking for from Microsoft, and I will be using one or the other unless I find something better.</p>
+<p>In my previous <a href="https://hutchcodes.net/2012/05/microsofts-app-reporting/" target="_blank">post</a> I complained about the 6 day delay in getting download number from Microsoft. &nbsp;Since then I have done a little bit of research into other ways of getting that information in a more timely manner. &nbsp;I found two good options <a href="http://mtiks.com/" target="_blank">MTIKS</a> and <a href="http://www.flurry.com/" target="_blank">Flurry</a>. &nbsp;They both provide much more information than I was looking for from Microsoft, and I will be using one or the other unless I find something better.</p>
 <!--more-->
 
 <p>They are both very easy to use. &nbsp;All you need to do is add a reference to their dll, then add one line of code to Application_Launching and Application_Activated to tell them to start a session, and another line to Application_Deactivated and Application_Closing to tell them to end the session.</p>

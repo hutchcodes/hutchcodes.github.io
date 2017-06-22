@@ -3,7 +3,7 @@ layout: post
 categories: [Random]
 title: New Years Resolutions 2014 - Retrospective
 ---
-It's time for my annual resolutions blog post, but first I wanted to do a little retrospective to see how I did on <a title="New Year’s Resolutions 2014" href="http://hutchcodes.net/new-years-resolutions-2014/">last year's resolutions</a>.
+It's time for my annual resolutions blog post, but first I wanted to do a little retrospective to see how I did on <a title="New Year’s Resolutions 2014" href="/2014/01/new-years-resolutions-2014/">last year's resolutions</a>.
 <!--more-->
 
 <strong><span style="color: #339966;">✓</span> Blog More</strong> - I did blogged <em>more</em>, but not as much as I had hoped.  Posts were still less than once per month.
