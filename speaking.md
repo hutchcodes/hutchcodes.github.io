@@ -5,14 +5,14 @@ includeInSearch: true
 permalink: /speaking/
 published: true
 ---
-
+<!--
 ### Future
 
+______
+-->
+### Past
 **06/27/2017** - Leveraging Azure Search in Your Application<br>
 [North Boston Azure Cloud User Group](https://www.meetup.com/North-Boston-Azure-Cloud-User-Group/events/239047186/)
-______
-
-### Past
 
 **04/22/2017** - Getting Started with Azure Function (with Hands on Lab)<br>
 [Global Azure Bootcamp](https://www.meetup.com/CascoBayNUG/events/236227762/)
