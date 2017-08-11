@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Azure SQL vs AWS RDS	Performance and Cost	
-categories: [Azure, AWS, SQL]
+categories: [Azure, AWS, Sql]
 date: 2017-08-11
 published: true
 codeproject: true
