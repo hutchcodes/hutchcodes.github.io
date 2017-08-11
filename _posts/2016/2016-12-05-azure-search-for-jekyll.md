@@ -20,7 +20,7 @@ This example is for [Jekyll](http://jekyllrb.com/), it will work with any static
 The first thing I did was create a page in Jekyll to produce a JSON representation of all the Posts and Pages from my site. I added a new piece of meta-data to the front matter to indicate whether each page should be indexed for search. This way I can be sure that pages like my RSS feed, SiteMap and my search.json don't get indexed.
 
 ~~~ liquid
-{% literal %}
+{% raw %}
 ---
 layout: nil
 includeInSearch: false
@@ -53,7 +53,7 @@ includeInSearch: false
     }
     {% endfor %}
 ]
-{% endliteral % }
+{% endraw %}
 ~~~
 
 That's simple enough. I had actually created that over a year ago when I first started to think about using Azure Search. I abandoned that attempt partly because it was going to be a manual process and I was worried I might forget the step to populate the index. 
