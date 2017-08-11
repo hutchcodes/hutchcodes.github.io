@@ -12,6 +12,7 @@ I've been doing a series of blog posts comparing Azure and AWS services that I'v
 Before I could propose this move I needed to understand the cost differences. To do that I needed to know which level of Azure SQL was equivalent to our m1.medium instance at AWS.
 
 **tl;dr** 
+
 An AzureSQL Standard Tier S3 database performs is about 7% faster than a SQL Server SE 2008 R2 database running on an m1.medium instance of AWS RDS. Price comparison are hard because AWS RDS has a sea of options to choose from, but if you meet the requirements for SQL Server Web licensing then pricing is similar.
   
 <!--more-->
