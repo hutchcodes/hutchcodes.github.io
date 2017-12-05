@@ -5,12 +5,20 @@ includeInSearch: true
 permalink: /speaking/
 published: true
 ---
-<!--
+
 ### Future
+**01/11/2018** - Understanding Your Application with Application Insight<br>
+[CodeMash](http://www.codemash.org/sessions/?id=6739)
 
 ______
--->
+
 ### Past
+**11/18/2017** - Going Serverless with Azure Functions<br>
+[Boston Code Camp](https://www.bostoncodecamp.com/CC28/sessions/details/16513)
+
+**11/18/2017** - Leveraging Azure Search in Your Application<br>
+[Boston Code Camp](https://www.bostoncodecamp.com/CC28/sessions/details/16514)
+
 **06/27/2017** - Leveraging Azure Search in Your Application<br>
 [North Boston Azure Cloud User Group](https://www.meetup.com/North-Boston-Azure-Cloud-User-Group/events/239047186/)
 
