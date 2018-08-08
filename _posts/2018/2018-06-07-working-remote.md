@@ -1,7 +1,18 @@
+---
+layout: post
+title: Working Remote
+categories: [Random]
+date: 2018-06-07
+published: true
+codeproject: false
+---
+
 One of my coworkers will be moving and switching to working remotely. He asked me to share my thoughts about working remote and it turns out I have a lot. Hopefully, they are worth sharing.
 
 I've been remote for 4 years now as an employee, and also worked remotely for about 7 years while as an independent consultant. The consulting was more solo work and less teamwork and was much more isolating, but it did help me form some boundaries around working from home.
 At this point, I hope never to work in an office again. Here's what I think are the keys to being happy working from home:
+
+<!--more-->
 
 ### Boundaries
 - Have a separate office space. This way you "go to work" by walking through a door, and you "come home" later. That's not to say that you can't "leave work" to do something at home for 5-10 minutes or a few hours (which I definitely do), just that you want to make sure you're not mixing home and work because work will eventually start intruding on home life.
