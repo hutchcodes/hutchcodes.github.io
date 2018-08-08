@@ -6,12 +6,9 @@ permalink: /speaking/
 published: true
 ---
 
-### Future
-**04/21/2018** - Global Azure Bootcamp<br>
-
-______
-
 ### Past
+**04/21/2018** - Global Azure Bootcamp<br>
+[Global Azure Bootcamp](https://www.meetup.com/CascoBayNUG/events/243859619/)
 
 **01/11/2018** - Understanding Your Application with Application Insight<br>
 [CodeMash](http://www.codemash.org/sessions/?id=6739)
