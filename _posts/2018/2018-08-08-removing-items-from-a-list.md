@@ -7,7 +7,7 @@ published: true
 codeproject: true
 ---
 
-It's not at all uncommon to need to iterate through a `List` to remove an item. And about half the time when I do so I get a `Collection was modified; enumeration operation may not execute.` exception the first time I run the code. Then I do something fancy like use a for loop to iterate through the list backward and remove the items from the list. Something like this:
+It's not at all uncommon to need to iterate through a List to remove an item. And about half the time when I do so I get a `Collection was modified; enumeration operation may not execute.` exception the first time I run the code. Then I do something fancy like use a for loop to iterate through the list backward and remove the items from the list. Something like this:
 
 <!--more-->
 
