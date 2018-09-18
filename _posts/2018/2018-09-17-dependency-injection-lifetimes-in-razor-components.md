@@ -14,7 +14,7 @@ I've been playing with Server-side Blazor for a few days and I've been really im
 For a great analysis of DI scopes and lifetimes checkout Michal Dudak's [post](https://blog.dudak.me/2018/dependency-lifetime-in-asp-net-core/). I based my testing of scopes off of his simple scenario to see how the scopes differed in Server-side Blazor.
 
 First I created 3 simple services
-```
+~~~csharp
 public class SingletonService
 {
     public int Counter;
@@ -29,11 +29,11 @@ public class TransientService
 {
     public int Counter;
 }
-```
+~~~
 
 Then I registered those services with Asp.Net in startup.cs.
 
-```
+~~~csharp
 public void ConfigureServices(IServiceCollection services)
 {
     // Since Blazor is running on the server, we can use an application service
@@ -44,10 +44,10 @@ public void ConfigureServices(IServiceCollection services)
     services.AddScoped<ScopedService>();
     services.AddTransient<TransientService>();
 }
-```
+~~~
 Then in the Configure method of startup.cs I requested an instance of the services and incremented the counters.
 
-```
+~~~csharp
 public void Configure(IBlazorApplicationBuilder app)
 {
     app.AddComponent<App>("app");
@@ -56,11 +56,11 @@ public void Configure(IBlazorApplicationBuilder app)
     app.Services.GetService<ScopedService>().Counter++;
     app.Services.GetService<TransientService>().Counter++;
 }
-```        
+~~~       
 
 Then I added a new page that gets those services injected, increments the counters and displays the results.
 
-```
+~~~
 @page "/dilifetimes"
 @using Blazor.DI.Lifetimes.App.Services
 @inject SingletonService singletonService
@@ -101,7 +101,7 @@ Then I added a new page that gets those services injected, increments the counte
         base.OnInit();
     }
 }
-```
+~~~
 
 As you would expect the values of counters are:
 
