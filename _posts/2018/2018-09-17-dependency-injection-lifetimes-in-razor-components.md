@@ -11,11 +11,9 @@ I've been playing with Server-side Blazor for a few days and I've been really im
 
 <!--more-->
 
-For a great analysis of DI scopes and lifetimes checkout Michal Dudak's [post](https://blog.dudak.me/2018/dependency-lifetime-in-asp-net-core/).
+For a great analysis of DI scopes and lifetimes checkout Michal Dudak's [post](https://blog.dudak.me/2018/dependency-lifetime-in-asp-net-core/). I based my testing of scopes off of his simple scenario to see how the scopes differed in Server-side Blazor.
 
-I based my testing of scopes off of his simple scenario to see how the scopes differed in Server-side Blazor.
-
-First I created 3 services
+First I created 3 simple services
 ```
 public class SingletonService
 {
@@ -135,3 +133,5 @@ And when we refresh the page both Singleton and Scoped work as we'd expect. The 
 The _odd_ thing happens. We navigate away from the page and back, and we only increment Singleton and Scoped once, from the DILifetimes page. This is because we haven't actually done a full web request when we navigated. We actually sent a message through SignalR to tell Server-side Blazor that we navigated. Blazor then did the navigation at the server and sent back the changes to the DOM which are then updated on the screen. The Configure method is never run.
 
 The message here is that Scoped services have a much longer lifetime in Server-side Blazor than they did in a traditional Asp.Net application. This can be good or bad, but it's definitely good to be aware of.
+
+Full source available [here](https://github.com/hutchcodes/Blazor.DI.Lifetimes)
