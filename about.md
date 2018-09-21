@@ -5,7 +5,7 @@ includeInSearch: true
 permalink: /about/
 ---
 
-I'm a Senior Developer at Ontuitive and a Microsoft Azure MVP. I've has been developing line of business applications for 15 years primarily in the Microsoft Stack, and have a passion for writing clean, scalable code and sharing what I've learned with others.
+I'm a Senior Developer at Quicken Loans and a Microsoft Azure MVP. I've has been developing line of business applications for 15 years primarily in the Microsoft Stack, and have a passion for writing clean, scalable code and sharing what I've learned with others.
 
 I also help run the [Casco Bay .Net User Group](http://www.meetup.com/CascoBayNUG/)
 
