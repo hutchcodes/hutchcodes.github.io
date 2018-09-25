@@ -134,4 +134,4 @@ The _odd_ thing happens. We navigate away from the page and back, and we only in
 
 The message here is that Scoped services have a much longer lifetime in Server-side Blazor than they did in a traditional Asp.Net application. This can be good or bad, but it's definitely good to be aware of.
 
-Full source available (https://github.com/hutchcodes/Blazor.DI.Lifetimes)
+Full source available [https://github.com/hutchcodes/Blazor.DI.Lifetimes]()

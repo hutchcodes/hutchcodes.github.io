@@ -178,4 +178,4 @@ For an example of this you can download and run the complete project, navigate t
 
 The Layout Component technique on requires you to wrap your content in the layout tag. Not only is this extra boilerplate in every page, it's may make it more difficult to do things like nested layouts.
 
-Full source (https://github.com/hutchcodes/Blazor.DataDrivenLayout)
+Full source [https://github.com/hutchcodes/Blazor.DataDrivenLayout]()
