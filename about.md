@@ -17,10 +17,8 @@ Email - <a href="mailto:jrhutch@live.com" >jrhutch@live.com</a>
 
 Twitter - <a href="https://twitter.com/hutchcodes" target="_blank">@hutchcodes</a>
 
-&nbsp;
+Resume - [Casco Bay .Net User Group](resume/JeremyHutchinsonResume.pdf)
 
-Disclaimer:
 
-<em>The views and opinions outlined within this blog are solely my own, and do not represent those of any organization. All technical procedures contained herein are provided without warranty of any kind. These procedures may or may not fall within the support guidelines of any company mentioned. If you have questions about the supportability of any information in this blog please contact the appropriate vendor.</em>
 
 
