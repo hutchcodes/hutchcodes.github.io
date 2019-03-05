@@ -17,8 +17,4 @@ Email - <a href="mailto:jrhutch@live.com" >jrhutch@live.com</a>
 
 Twitter - <a href="https://twitter.com/hutchcodes" target="_blank">@hutchcodes</a>
 
-Resume - [Casco Bay .Net User Group](resume/JeremyHutchinsonResume.pdf)
-
-
-
-
+Resume - [JeremyHutchinsonResume.pdf](resume/JeremyHutchinsonResume.pdf)
