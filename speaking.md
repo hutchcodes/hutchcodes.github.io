@@ -7,6 +7,15 @@ published: true
 ---
 
 ### Past
+**02/21/2019** - Understand Your Applications with Application Insights<br>
+[Boston Azure](https://www.meetup.com/bostonazure/events/258109596/)
+
+**11/17/2018** - Understand Your Applications with Application Insights<br>
+[Boston Code Camp](https://www.bostoncodecamp.com/CC30/sessions/details/16698)
+
+**11/03/2018** - Understand Your Applications with Application Insights<br>
+[New Hampshire Code Camp](https://sessionize.com/api/v2/2k7oucky/view/grid)
+
 **04/21/2018** - Global Azure Bootcamp<br>
 [Global Azure Bootcamp](https://www.meetup.com/CascoBayNUG/events/243859619/)
 
