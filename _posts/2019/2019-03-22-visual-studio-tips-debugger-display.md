@@ -7,7 +7,7 @@ published: true
 codeproject: true
 ---
 
-When you look at an object in the Watch window what you see is whatever comes out of the `ToString()` method. But what if you could control what was displayed so that you could see some meaningful value? Well, you can.
+When you look at an object in the Watch window what you see is whatever comes out of the ToString() method. But what if you could control what was displayed so that you could see some meaningful value? Well, you can.
 
 <!--more-->
 
