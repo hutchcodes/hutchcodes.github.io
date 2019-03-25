@@ -9,6 +9,6 @@ This is a series I started where I'm listing out some tips for Visual Studio use
 
 Unless otherwise noted all of these will work in the Community edition of Visual Studio.
 
-1. [Debugger Display](2019/03/visual-studio-tips-debugger-display/) - Control what value an object displays in the watch window
-2. [$exception Pseudovariable](2019/03/visual-studio-tips-view-uncaptured-exception/) - View the details of a caught but uncaptured exception.
+1. [Debugger Display](/2019/03/visual-studio-tips-debugger-display/) - Control what value an object displays in the watch window
+2. [$exception Pseudovariable](/2019/03/visual-studio-tips-view-uncaptured-exception/) - View the details of a caught but uncaptured exception.
 
