@@ -2,7 +2,7 @@
 layout: post
 title: Visual Studio Tips - Evaluate a Function Without Side Effects
 categories: [VSTips]
-date: 2019-03-25
+date: 2019-03-26
 published: true
 codeproject: true
 ---
