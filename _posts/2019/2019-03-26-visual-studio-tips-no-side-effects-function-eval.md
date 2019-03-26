@@ -32,5 +32,6 @@ If we want to see what the result of the `AddOne()` method would be, but we don'
 foo.AddOne(), nse
 ~~~
 
+![alt text](/img/2019/NoSideEffects.jpg "Loop showing calling AddOne method with and with out nse")
 
 
