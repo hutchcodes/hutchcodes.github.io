@@ -14,3 +14,4 @@ Unless otherwise noted all of these will work in the Community edition of Visual
 3. [No Side Effect Function Evaluation](/2019/03/visual-studio-tips-no-side-effects-function-eval/) - Evaluate a function in the Watch or Immediate window without any side effects.
 
 
+4. [Source Map Scroll Bar](/2019/03/visual-studio-tips-source-map-scroll-bar/) - See and navigate all the code in a file quickly in the scroll bar.
