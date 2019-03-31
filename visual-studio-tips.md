@@ -16,3 +16,4 @@ Unless otherwise noted all of these will work in the Community edition of Visual
 5. [Breakpoints](/2019/03/visual-studio-break-points/) - Advanced breakpoint features
 6. [Solution Explorer Search](/2019/03/visual-studio-solution-explorer-search/) - Helpful features for searching in the Solution Explorer
 7. [DataTips](/2019/04/visual-studio-tips-using-data-tips/) - You can do more with DataTips than just hover to view values.
+8. [Tracepoints](/2019/04/visual-studio-tips-trace-points/) - Like Breakpoints, but they log to output and don't stop execution.
