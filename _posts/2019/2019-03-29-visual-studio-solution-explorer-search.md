@@ -5,6 +5,7 @@ categories: [VSTips]
 date: 2019-03-29
 published: true
 codeproject: true
+devto: true
 ---
 
 Solution Explorer Search has been in Visual Studio for a while, but there are a few features that I think many developers overlook (myself included). Here are a few that you might have missed.

@@ -5,6 +5,7 @@ categories: [VSTips]
 date: 2019-03-25
 published: true
 codeproject: true
+devto: true
 ---
 
 Ever have code where you catch an exception because to handle it, but you don't need to use the exception itself? Maybe just knowing the exception type is enough for you. But then you sometimes want to see it while debugging? 

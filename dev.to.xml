@@ -1,7 +1,7 @@
 ---
 layout: nil
 includeInSearch: false
-permalink: /feed
+permalink: /dev.to.xml
 ---
 <?xml version="1.0"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
@@ -14,18 +14,19 @@ permalink: /feed
     <pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %Z" }}</pubDate>
     <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %Z" }}</lastBuildDate>
     {% for post in site.posts %}
-    <item>
-      {% for t in post.categories %}
-      <category>{{ t }}</category>
-      {% endfor %}
-
-      <title>{{ post.title | xml_escape }}</title>
-      <link>https://hutchcodes.net{{ post.url }}</link>
-      <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %Z" }}</pubDate>
-      <author>Jeremy Hutchinson</author>
-      <guid>https://hutchcodes.net{{ post.url }}</guid>
-      <description>{{ post.content | xml_escape }}</description>
-    </item>
+      {% if post.devto %}
+        <item>
+          {% for t in post.categories %}
+          <category>{{ t }}</category>
+          {% endfor %}
+          <title>{{ post.title | xml_escape }}</title>
+          <link>https://hutchcodes.net{{ post.url }}</link>
+          <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %Z" }}</pubDate>
+          <author>Jeremy Hutchinson</author>
+          <guid>https://hutchcodes.net{{ post.url }}</guid>
+          <description>{{ post.content | xml_escape }}</description>
+        </item>
+      {% endif %}
     {% endfor %}
   </channel> 
 </rss>

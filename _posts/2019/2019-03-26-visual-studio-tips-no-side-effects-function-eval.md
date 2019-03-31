@@ -5,6 +5,7 @@ categories: [VSTips]
 date: 2019-03-26
 published: true
 codeproject: true
+devto: true
 ---
 
 Ever been debugging and wanted to know what the result a function call would but calling it would change the state in a way that would make continuing difficult or impossible? Well, you can evaluate it and specify that it does not have any side effects.

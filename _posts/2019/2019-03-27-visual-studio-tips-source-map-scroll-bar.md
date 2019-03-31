@@ -5,6 +5,7 @@ categories: [VSTips]
 date: 2019-03-27
 published: true
 codeproject: true
+devto: true
 ---
 
 Do you find yourself scrolling up and down in a large file in Visual Studio? "Show Source Maps in Scroll Bar" gives you a 1000 foot view of your code and allows you to navigate with a simple click.
