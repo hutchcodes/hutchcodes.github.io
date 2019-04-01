@@ -5,6 +5,7 @@ categories: [VSTips]
 date: 2019-04-01
 published: true
 codeproject: true
+devto: true
 ---
 
 Data tips, the Visual Studio feature that allows you to hover over a variable and see its value while debugging, can be super useful. Here are a few tricks that you may not know about them.
