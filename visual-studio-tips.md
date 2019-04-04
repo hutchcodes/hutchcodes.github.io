@@ -18,4 +18,4 @@ Unless otherwise noted all of these will work in the Community edition of Visual
 7. [DataTips](/2019/04/visual-studio-tips-using-data-tips/) - You can do more with DataTips than just hover to view values.
 8. [Tracepoints](/2019/04/visual-studio-tips-trace-points/) - Like Breakpoints, but they log to output and don't stop execution.
 9. [Keyboard Shortcuts for Debugging](/2019/04/visual-studio-tips-debug-keyboard-shortcuts/) - Save a little time and stay focused on your code rather than hunting for that command.
-10. [Tool Window Management](/2019/04/visual-studio-tips-window-management/) - Setup your perfect tool window layouts, save them and switch between them.
+10. [Window Management](/2019/04/visual-studio-tips-window-management/) - Setup your perfect tool window layouts, save them and switch between them.

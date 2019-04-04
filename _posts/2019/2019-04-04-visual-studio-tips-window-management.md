@@ -22,6 +22,8 @@ If a window is docked, you can Pin a window with the Thumbtack icon to make it a
 
 ![alt text](/img/2019/WindowPinUnpin.jpg "Window header with pin/unpin icon highlighted")
 
+### Save Your Window Layouts
+
 Once you have all your windows where you want them you can Save the layout by going to Window -> Save Window Layout. You'll be prompted to name your layout. This saves which windows are open, where they are docked, whether they are pinned or autohidden, **and** their size.
 
 ![alt text](/img/2019/WindowSaveLayout.jpg "Window Save Layout menu item")
