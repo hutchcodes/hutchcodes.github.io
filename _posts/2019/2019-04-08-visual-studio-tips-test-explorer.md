@@ -22,13 +22,13 @@ The ability to re-run the last test run can be very handy if you don't want to t
 
 ### Group By
 
-By default the Test Explorer window uses the 'Test Hierarchy' view which displays tests based on Project, Namespace, Class, Test, TestCase. If you turn off the 'Test Hierarchy' view you have the option to change the grouping to one of the following views:
+By default, the Test Explorer window uses the 'Test Hierarchy' view which displays tests based on Project, Namespace, Class, Test, TestCase. If you turn off the 'Test Hierarchy' view you have the option to change the grouping to one of the following views:
 - Class - Groups tests by Class, Test, TestCase. Though the namespace isn't displayed classes with the same name in different namespaces are shown separately.
 - Duration - Groups tests into 3 buckets. Fast (<100ms), Medium, Slow (>1s)
 - Namespace - Grouped by Namespace, Class, Test, TestCase
 - Project - Grouped by Project, Test, TestCase (ignores Namespace)
 - Outcome - Groups tests by Passed, Failed and Not Run. This is handy when you're trying to fix a handful of failing tests.
-- Trait - Groups tests by various traits about the tests. Test can be listed in this multiple times and combined with filters this can be a very powerful view.
+- Trait - Groups tests by various traits about the tests. Tests can be listed in this multiple times and combined with filters this can be a very powerful view.
 
 ![alt text](/img/2019/TestExplorerGroups.gif "Animation of selecting various group by options")
 
@@ -70,7 +70,7 @@ I can then apply a filter to that view to narrow it down. Let's say I wanted to 
 
 ### Playlists
 
-Playlists allow you create a custom group of tests by whatever criteria you decide. Maybe you have a group of tests that you want to run whenever you're working on a certain part of the code. You can add those tests to a playlist then select the playlist to filter your tests. You can also check in these playlists for others to use.
+Playlists allow you to create a custom group of tests by whatever criteria you decide. Maybe you have a group of tests that you want to run whenever you're working on a certain part of the code. You can add those tests to a playlist then select the playlist to filter your tests. You can also check in these playlists for others to use.
 
 ![alt text](/img/2019/TestExplorerPlaylist.gif "Animation of adding tests to a playlist")
 
