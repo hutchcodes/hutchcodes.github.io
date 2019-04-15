@@ -20,3 +20,4 @@ Unless otherwise noted all of these will work in the Community edition of Visual
 9. [Keyboard Shortcuts for Debugging](/2019/04/visual-studio-tips-debug-keyboard-shortcuts/) - Save a little time and stay focused on your code rather than hunting for that command.
 10. [Window Management](/2019/04/visual-studio-tips-window-management/) - Setup your perfect tool window layouts, save them and switch between them.
 11. [Test Explorer](/2019/04/visual-studio-tips-test-explorer/) - Sort, Group and Filter your unit tests so you can quickly run just the tests you need.
+12. [Bulk Editing Shortcuts](/2019/04/visual-studio-tips-editing-shortcuts/) - Making a lot of repetitive changes? Here's a few shortcuts to make that easier.
