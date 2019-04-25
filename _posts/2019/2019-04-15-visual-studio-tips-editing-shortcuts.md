@@ -12,21 +12,21 @@ One of the most tedious things we do as developers is making repetitive changes.
 
 <!--more-->
 
-### Multi-Carat Editing
+### Multi-Caret Editing
 
-Let's start with adding a property to the instantiation of some test objects. This is often the perfect scenario for "muti-carat editing." To start this you can do two things. The first is to position your carat where you'd like to start editing on the first line, then hold `Shift+Alt` and either use your arrows or the mouse to select a column or area. The beautiful thing about this method is it allows you to select a block of text to replace.
+Let's start with adding a property to the instantiation of some test objects. This is often the perfect scenario for "muti-caret editing." To start this you can do two things. The first is to position your caret where you'd like to start editing on the first line, then hold `Shift+Alt` and either use your arrows or the mouse to select a column or area. The beautiful thing about this method is it allows you to select a block of text to replace.
 
-![alt text](/img/2019/MultiCaratReplace.gif "Using Shift Alt to replace text on multiple lines")
+![alt text](/img/2019/MultiCaretReplace.gif "Using Shift Alt to replace text on multiple lines")
 
-The drawback of using `Shift+Alt` is that the columns you want to edit must line up vertically. But frequently that isn't the case, and that's where `Ctrl+Alt` comes into play. With `Ctrl+Alt` you set the multiple carats by holding `Ctrl+Alt` and clicking where you want to edit. You can then insert text in all those places, even multiple times on the same line.
+The drawback of using `Shift+Alt` is that the columns you want to edit must line up vertically. But frequently that isn't the case, and that's where `Ctrl+Alt` comes into play. With `Ctrl+Alt` you set the multiple carets by holding `Ctrl+Alt` and clicking where you want to edit. You can then insert text in all those places, even multiple times on the same line.
 
-![alt text](/img/2019/MultiCaratInsert.gif "Using Control Alt to insert text on multiple lines")
+![alt text](/img/2019/MultiCaretInsert.gif "Using Control Alt to insert text on multiple lines")
 
 ### Duplicate Line
 
 Those work great if the lines you want to edit already exist, or if you know how many lines you need to create at once. But I often find myself wanting to duplicate a line and make a few changes to it. For that, you can use the `Ctrl+E, Ctrl+V` keyboard shortcut which duplicates the line your cursor is on.
 
-![alt text](/img/2019/MultiCaratInsert.gif "Duplicate line with Control E, Control V")
+![alt text](/img/2019/DuplicateLine.gif "Duplicate line with Control E, Control V")
 
 ### Clipboard Ring
 
