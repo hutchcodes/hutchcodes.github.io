@@ -4,8 +4,8 @@ title: App Settings in Client-Side Blazor
 categories: [Blazor]
 date: 2019-12-17
 published: true
-codeproject: false
-devto: false
+codeproject: true
+devto: true
 ---
 
 I've been spoiled by Asp.Net and expect app settings to just work, but there is no easily configured app settings story for client-side Blazor *yet*. What I'm looking for is the ability to set some settings on a per-environment (dev/test/beta/prod) through Azure App Service Application Settings. The goal is one build artifact that moves from environment to environment with zero changes.
