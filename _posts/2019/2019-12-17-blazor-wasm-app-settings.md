@@ -115,7 +115,7 @@ To get around this we can create a component that loads the settings and once lo
 ~~~
 
 
-Because we can't (or I couldn't) load the `ClientAppSettings` instance into the Dependency Injection to make it available throughout the application, I'm just putting the values in a static class. 
+Because we can't (or I couldn't) load the `ClientAppSettings` instance into the Dependency Injection to make it available throughout the application, I'm just putting the values in a static `AppSettings` class. 
 
 Now, in the MainLayout.razor we can wrap the `@body` with the `AppSettingsLoader`
 
