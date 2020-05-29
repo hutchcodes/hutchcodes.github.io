@@ -5,7 +5,7 @@ includeInSearch: true
 permalink: /about/
 ---
 
-I'm a Software Engineer at Microsoft working on the Azure Portal. Before that developed line of business applications at a number of different companies for 15 years primarily in the Microsoft Stack, and have a passion for writing clean, scalable code and sharing what I've learned with others.
+I'm a Software Engineer at Microsoft working on the Azure Portal. Before that I spent about 20 years developed various business applications at a number of different companies.  I have a passion for writing clean, scalable code and sharing what I've learned with others.
 
 I also help run the [Casco Bay .Net User Group](http://www.meetup.com/CascoBayNUG/)
 
