@@ -7,8 +7,8 @@ includeInSearch: false
 	{% for p in site.posts %}
 	{
 	"type": "post",
-	"title": "{{ p.title }}",
-	"publishDate": {{ p.date | jsonify }},
+	"title": {{ p.title | json_escape | jsonify }},
+	"publishDate": {{ p.date | date_to_xmlschema | jsonify }},
 	"categories": [{% for cat in p.categories %}"{{ cat }}"{% unless forloop.last %},{% endunless %}{% endfor %}],
 	"tags": [{% for tag in p.tags %}"{{ tag }}"{% unless forloop.last %},{% endunless %}{% endfor %}],
 	"url": "{{ p.url }}",
@@ -20,7 +20,7 @@ includeInSearch: false
 	{% for p in pages %},
 	{
 	"type": "page",
-	"title": "{{ p.title }}",
+	"title": {{ p.title | json_escape | jsonify }},
 	"categories": [{% for cat in p.categories %}"{{ cat }}"{% unless forloop.last %},{% endunless %}{% endfor %}],      			
 	"tags": [{% for tag in p.tags %}"{{ tag }}"{% unless forloop.last %},{% endunless %}{% endfor %}],
 	"url": "{{ p.url }}",

@@ -1,5 +1,5 @@
 ﻿var menuVisible = false;
-var searchUrl = 'https://hutchcodes-func.azurewebsites.net/api/Search';
+var searchUrl = 'https://hutchcodesblog.azurewebsites.net/api/Search';
 
 function menuButtonClick() {
 	var nav = document.getElementById("NavSection");
@@ -17,15 +17,6 @@ function menuClick() {
     nav.style.display = "";
     menuVisible = false;
 }
-
-var appInsights=window.appInsights||function(config){
-    function i(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",y=u.createElement(o),r,f;y.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(y);try{t.cookie=u.cookie}catch(p){}for(t.queue=[],t.version="1.0",r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)i("track"+r.pop());return i("set"+s),i("clear"+s),i(h+a),i(c+a),i(h+v),i(c+v),i("flush"),config.disableExceptionTracking||(r="onerror",i("_"+r),f=e[r],e[r]=function(config,i,u,e,o){var s=f&&f(config,i,u,e,o);return s!==!0&&t["_"+r](config,i,u,e,o),s}),t
-}({
-    instrumentationKey:"2b884f8d-165f-4d8e-b25a-975d4ce86fa1"
-    });
-   
-window.appInsights=appInsights;
-appInsights.trackPageView();
 
 function searchKeyPress(e){
     if (e.keyCode != 13) return;
@@ -76,25 +67,25 @@ function displaySearchResults(searchResults){
 	var main = document.getElementById('main');	
     var section = document.getElementById('main').getElementsByTagName("section")[0];
 
-    for (var x=0; x < searchResults.Results.length; x++)
+    for (var x=0; x < searchResults.length; x++)
     {
-    	var r = searchResults.Results[x];
-        if (r.Document.Type == "post") {
+    	var r = searchResults[x];
+        if (r.document.type == "post") {
             var categories = "";
-            for (var y=0; y < r.Document.Categories.length; y++)
+            for (var y=0; y < r.document.categories.length; y++)
             {
-            	var c = r.Document.Categories[y];
+            	var c = r.document.categories[y];
                 categories += "<a href='/search/?search&cat=" + c + "'>" + c + "</a>&nbsp;";
             }
             if (!categories)
             {
                 categories = " in " + categories;
             }
-            response += "<article class='post'> <header class='jumbotron'> <h2 class='postTitle'><a href='" + r.Document.Url + "'>" + r.Document.Title + "</a></h2> <abbr class='postDate' title='" + r.Document.PublishDate + "'>" + new Date(r.Document.PublishDate).toLocaleDateString("en-us", {year: "numeric", month: "long", day: "numeric"}) + "</abbr> " + categories + "</header> <div class='articleBody'>" + r.Document.Excerpt + "</div><div><a href='" + r.Document.Url + "'>Continue Reading</a></div></article>";
+            response += "<article class='post'> <header class='jumbotron'> <h2 class='postTitle'><a href='" + r.document.url + "'>" + r.document.title + "</a></h2> <abbr class='postDate' title='" + r.document.publishDate + "'>" + new Date(r.document.publishDate).toLocaleDateString("en-us", {year: "numeric", month: "long", day: "numeric"}) + "</abbr> " + categories + "</header> <div class='articleBody'>" + r.document.excerpt + "</div><div><a href='" + r.document.url + "'>Continue Reading</a></div></article>";
         }
         else
         {
-            response += "<article class='post'> <header class='jumbotron'> <h2 class='postTitle'><a href='" + r.Document.Url + "'>" + r.Document.Title + "</a></h2></header> <div class='articleBody'>" + r.Document.Excerpt + "</div><div><a href='" + r.Document.Url + "'>Continue Reading</a></div></article>";
+            response += "<article class='post'> <header class='jumbotron'> <h2 class='postTitle'><a href='" + r.document.url + "'>" + r.document.title + "</a></h2></header> <div class='articleBody'>" + r.document.excerpt + "</div><div><a href='" + r.document.url + "'>Continue Reading</a></div></article>";
         }
     }
     if (response){
