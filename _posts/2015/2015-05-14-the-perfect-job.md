@@ -18,13 +18,13 @@ The team, more than any other aspect, can make or break a job. I want a team of 
 
 It isn’t about what I’m building, it’s about how we build it. I don’t want to build a mediocre anything. I want to work on a project where the goal is to create the best X. I want to have time to make sure it’s being built well, that’s it’s well tested, that it scales as needed, and most importantly that it’s maintainable.
 
-That doesn’t mean I’m want perfection from the outset. I understand tradeoffs will be made, but we should be striving towards excellence, not mediocrity.
+That doesn’t mean I want perfection from the outset. I understand tradeoffs will be made, but we should be striving towards excellence, not mediocrity.
 
 ## Work Environment
 
 The key to work environment for me is quiet. Ideally that would mean an office with a door, maybe one officemate. If it’s a team room or open plan, there should be an expectation of near silence. That means whenever possible people take their phone and other conversations in a different room.  
 
-I already have my perfect office in my house and really prefer working on remote teams. The key here is that the team needs a remote mindset, not an office based team with an office based mindset with 1-2 remote developers.
+I already have my perfect office in my house and really prefer working on remote teams. The key here is that the team needs a remote mindset, not an office based team with an office based mindset with 1-2 remote developers. Meetings can be very difficult if it's a room full of people talking and I'm the only one on Teams/Zoom.
 
 ## Compensation
 
